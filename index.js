@@ -63,5 +63,5 @@ serverEventCommand.on('serverEnd', () => {
     io.emit('connection', { status: 'end', message: 'Live ended' })
 })
 
-server.listen(3000)
 console.log('SERVER LISTEN ON PORT : 3000')
+server.listen(3000)
