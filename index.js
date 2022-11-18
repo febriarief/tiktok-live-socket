@@ -50,6 +50,11 @@ serverEventCommand.on('serverReady', () => {
         console.log(`${data.uniqueId} give ${data.repeatCount}x ${data.giftName}`)
         io.emit('gifts', data)
     })
+
+    tiktokLiveConnection.on('disconnected', () => {
+        console.log('LIVE ENDED')
+        serverEventCommand.emit('serverEnd')
+    })
 })
 
 serverEventCommand.on('serverEnd', () => {
