@@ -51,7 +51,7 @@ serverEventCommand.on('serverReady', () => {
         io.emit('gifts', data)
     })
 
-    tiktokLiveConnection.on('disconnected', () => {
+    tiktokLiveConnection.on('streamEnd', () => {
         console.log('LIVE ENDED')
         serverEventCommand.emit('serverEnd')
     })
