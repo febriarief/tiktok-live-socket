@@ -64,4 +64,4 @@ serverEventCommand.on('serverEnd', () => {
 })
 
 console.log('SERVER LISTEN ON PORT : 3000')
-server.listen(3000)
+server.listen(80)
