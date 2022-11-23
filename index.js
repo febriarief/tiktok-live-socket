@@ -68,6 +68,8 @@ serverEventCommand.on('serverEnd', () => {
     io.emit('connection', { status: 'end', message: 'Live ended' })
 })
 
-const PORT = process.env.PORT || 8080
-server.listen(PORT)
-console.log('SERVER LISTEN ON PORT : ' + PORT)
+// const PORT = process.env.PORT || 8080
+// server.listen(PORT)
+// console.log('SERVER LISTEN ON PORT : ' + PORT)
+server.listen()
+console.log('SERVER LISTEN')
